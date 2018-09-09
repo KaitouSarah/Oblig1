@@ -9,6 +9,10 @@ public class InitializeListner implements ServletContextListener {
 
 	@Override
 	public final void contextInitialized(final ServletContextEvent sce) {
-		Main.initializeDatabase();
+		try {
+			Main.initializeDatabase();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }

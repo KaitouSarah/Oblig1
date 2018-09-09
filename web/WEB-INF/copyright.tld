@@ -7,7 +7,7 @@
 
     <tlib-version>2.1</tlib-version>
     <uri>https://journaldev.com/jsp/tlds/mytags</uri>
-    <description>Copyright</description>
+    <description>CustomTags</description>
     <short-name>mytags</short-name>
     <tag>
         <name>Copyright</name>
@@ -16,6 +16,21 @@
         <attribute>
             <name>since</name>
             <required>true</required>
+        </attribute>
+    </tag>
+    <tag>
+        <name>translation</name>
+        <tag-class>no.hvl.dat152.oblig1.CustomTags.TranslationTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>key</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>langCode</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
         </attribute>
     </tag>
 </taglib>

@@ -1,9 +1,6 @@
 package no.hvl.dat152.oblig1.Util;
 
-import no.hvl.dat152.oblig1.Database.Database;
-
 import java.util.HashMap;
-import java.util.List;
 
 public class CurrencyExchanger {
 

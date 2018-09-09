@@ -44,9 +44,9 @@ public class Database {
 			.stream()
 			.filter(predicate)
 			/*
-			Because we don't want there to be an active link between data in database and returned data,
+			Because we don't want there to be an active link between data in Database and returned data,
 			we create a copy.
-			This is to enforce the rules of a database we are simulating.
+			This is to enforce the rules of a Database we are simulating.
 			 */
 			.map(HashMap::new)
 			.collect(Collectors.toList());

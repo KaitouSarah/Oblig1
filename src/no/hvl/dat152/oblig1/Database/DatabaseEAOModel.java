@@ -1,8 +1,8 @@
 package no.hvl.dat152.oblig1.Database;
 
-import javax.xml.crypto.Data;
 import java.util.HashMap;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class DatabaseEAOModel {
 	private final String tableName;
@@ -13,21 +13,18 @@ public class DatabaseEAOModel {
 		this.database = Database.getInstance();
 	}
 
-	private static DatabaseEAOModel INSTANCE;
-
-	public static DatabaseEAOModel getInstance() {
-		if (INSTANCE == null) {
-			INSTANCE = new DatabaseEAOModel(null);
-		}
-		return INSTANCE;
-	}
+	protected static DatabaseEAOModel INSTANCE;
 
 	protected List<HashMap<String, Object>> getObjects() {
 		return database.getObjects(tableName);
 	}
 
 	protected HashMap<String, Object> getObject (String key, Object value) {
-		return database.getObject(tableName, object -> object.get(key) == value);
+		return getObject(object -> object.get(key) == value);
+	}
+
+	protected HashMap<String, Object> getObject (Predicate<HashMap<String, Object>> predicate) {
+		return database.getObject(tableName, predicate);
 	}
 
 	protected void createObject (HashMap<String, Object> object) {

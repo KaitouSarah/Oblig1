@@ -24,7 +24,7 @@ public class ProductEAO extends DatabaseEAOModel {
 		int pno = (int) object.get("pno");
 		String pName = (String) object.get("pName");
 		double priceInEuro = (double) object.get("priceInEuro");
-		String imageFile = (String) object.get("imageFile");
+		String imageFile = (String) object.get("imageFIle");
 
 		return new Product(pno, pName, priceInEuro, imageFile);
 	}

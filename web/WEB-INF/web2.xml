@@ -36,8 +36,8 @@
 
     <jsp-config>
         <taglib>
-            <taglib-uri>no.hvl.dat152.oblig1.CustomTags.CopyrightTAG</taglib-uri>
-            <taglib-location>/WEB-INF/copyright.tld</taglib-location>
+            <taglib-uri>https://journaldev.com/jsp/tlds/mytags</taglib-uri>
+            <taglib-location>/WEB-INF/mycustomtags.tld</taglib-location>
         </taglib>
     </jsp-config>
 </web-app>

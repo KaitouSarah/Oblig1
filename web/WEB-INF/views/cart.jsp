@@ -9,6 +9,7 @@
 <html>
     <head>
         <title>Cart</title>
+        <link rel="stylesheet" href="public/style.css">
     </head>
     <body>
         <header>
@@ -19,6 +20,7 @@
         <main>
             <h1>Cart</h1>
 
+            <p class="bottomlinks"><a href="/home">Home</a> <a href="/products">Products</a></p>
         </main>
     </body>
 </html>

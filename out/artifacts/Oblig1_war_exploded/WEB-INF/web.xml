@@ -6,7 +6,7 @@
 
     <servlet>
         <servlet-name>Index</servlet-name>
-        <servlet-class>no.hvl.dat152.oblig1.controller.Index</servlet-class>
+        <servlet-class>no.hvl.dat152.oblig1.controller.IndexController</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -26,11 +26,11 @@
 
     <servlet>
         <servlet-name>Cart</servlet-name>
-        <servlet-class>no.hvl.dat152.oblig1.controller.Cart</servlet-class>
+        <servlet-class>no.hvl.dat152.oblig1.controller.CartController</servlet-class>
     </servlet>
 
     <servlet-mapping>
         <servlet-name>Cart</servlet-name>
-        <url-pattern>/Cart</url-pattern>
+        <url-pattern>/cart</url-pattern>
     </servlet-mapping>
 </web-app>

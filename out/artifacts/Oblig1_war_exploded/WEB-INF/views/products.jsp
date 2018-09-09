@@ -36,13 +36,14 @@
                                             <dt>Beskrivelse</dt>
                                             <dd>Dette er den ultimate kopp for programvareutviklere som sitter sene kvelder og trenger noe for å ikke sovne</dd>
                                         </dl>
-                                        <button>Legg i handlekurv</button>
+                                        <button><a href="">Legg i handlekurv</a></button>
                                     </div>
                                 </div>
                             </div>
                         </li>
                     </ul>
                 </c:forEach>
+                <p class="bottomlinks"><a href="/home">Home</a> <a href="/cart">Cart</a></p>
             </section>
         </main>
     </body>

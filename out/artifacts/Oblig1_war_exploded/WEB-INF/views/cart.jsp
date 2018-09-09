@@ -8,9 +8,19 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
     <head>
-        <title>Title</title>
+        <title>Cart</title>
+        <link rel="stylesheet" href="public/style.css">
     </head>
     <body>
-        
+        <header>
+            <a href="#">Norsk</a>
+            <a href="#">Engelsk</a>
+            <a href="#">Espanjol</a>
+        </header>
+        <main>
+            <h1>Cart</h1>
+
+            <p class="bottomlinks"><a href="/home">Home</a> <a href="/products">Products</a></p>
+        </main>
     </body>
 </html>

@@ -3,7 +3,7 @@
 
 <html>
     <head>
-        <title>Products</title>
+        <title>Home</title>
         <link rel="stylesheet" href="public/style.css">
     </head>
     <body>
@@ -14,7 +14,8 @@
         </header>
         <main>
             <h1>Welcome to our fucking sjopp</h1>
-            <<img class="logo" src="public/images/logo.jpg" alt="">
+            <img class="logo" src="public/images/logo.jpg" alt="">
+            <p>Ta en titt på våre fantastiske <a href="/products">produkter</a></p>
         </main>
     </body>
 </html>

@@ -43,3 +43,8 @@
 .logo {
     max-width: 25rem;
 }
+
+.bottomlinks {
+    float: left;
+    clear: left;
+}

@@ -33,4 +33,11 @@
         <servlet-name>Cart</servlet-name>
         <url-pattern>/cart</url-pattern>
     </servlet-mapping>
+
+    <jsp-config>
+        <taglib>
+            <taglib-uri>no.hvl.dat152.oblig1.CustomTags.CopyrightTAG</taglib-uri>
+            <taglib-location>/WEB-INF/copyright.tld</taglib-location>
+        </taglib>
+    </jsp-config>
 </web-app>

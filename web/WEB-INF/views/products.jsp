@@ -1,11 +1,5 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: BMO 2.0
-  Date: 07.09.2018
-  Time: 23.43
-  To change this template use File | Settings | File Templates.
---%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="no.hvl.dat152.oblig1.CustomTags.CopyrightTAG" prefix="mytags"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
     <head>
@@ -36,7 +30,7 @@
                                             <dt>Beskrivelse</dt>
                                             <dd>Dette er den ultimate kopp for programvareutviklere som sitter sene kvelder og trenger noe for å ikke sovne</dd>
                                         </dl>
-                                        <button><a href="">Legg i handlekurv</a></button>
+                                        <button onclick="window.location.href='/cart'">Legg i handlekurv</button>
                                     </div>
                                 </div>
                             </div>
@@ -47,4 +41,7 @@
             </section>
         </main>
     </body>
+    <footer>
+        <mytags:Copyright since="2008">HVL</mytags:Copyright>
+    </footer>
 </html>

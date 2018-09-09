@@ -1,5 +1,5 @@
-.products {
-
+section {
+    clear: right;
 }
 
 .products li {
@@ -47,4 +47,11 @@
 .bottomlinks {
     float: left;
     clear: left;
+}
+
+.cartTable th td{
+    border: 1px solid black;
+}
+.cartTable th {
+    max-width: 10rem;
 }

@@ -65,7 +65,7 @@ public class Dictionary {
 
 	private static Dictionary INSTANCE;
 
-	public static Dictionary getInsstance() {
+	public static Dictionary getInstance() {
 		if (INSTANCE == null) {
 			INSTANCE = new Dictionary();
 		}
@@ -99,7 +99,6 @@ public class Dictionary {
 				return langauge;
 			}
 		}
-
 		return null;
 	}
 
@@ -109,7 +108,6 @@ public class Dictionary {
 				return translation.getText();
 			}
 		}
-
 		return null;
 	}
 

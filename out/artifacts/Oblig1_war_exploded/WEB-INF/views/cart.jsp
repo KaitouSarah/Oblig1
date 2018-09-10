@@ -1,5 +1,5 @@
-<%@ taglib uri="no.hvl.dat152.oblig1.CustomTags.CopyrightTAG" prefix="c"%>
-<%@ taglib uri="no.hvl.dat152.oblig1.CustomTags.CopyrightTAG" prefix="mytags"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="https://journaldev.com/jsp/tlds/mytags" prefix="mytags"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
     <head>
@@ -16,13 +16,13 @@
             <h1>Cart</h1>
             <table class="cartTable">
                 <tr>
-                    <th>Name</th>
-                    <th>Short description</th>
-                    <th>Price</th>
-                    <th>Quantity</th>
-                    <th>Total</th>
+                    <th><mytags:translation key="name" langCode="${langCode}"></mytags:translation></th>
+                    <th><mytags:translation key="shortDescription" langCode="${langCode}"></mytags:translation></th>
+                    <th><mytags:translation key="price" langCode="${langCode}"></mytags:translation></th>
+                    <th><mytags:translation key="quantity" langCode="${langCode}"></mytags:translation></th>
+                    <th><mytags:translation key="total" langCode="${langCode}"></mytags:translation></th>
                 </tr>
-                <c:forEach items="${products}" var="carr">
+                <c:forEach items="${cart}" var="cart">
                     <tr>
                         <td>White Coffee Mug (TM)</td>
                         <td>This is the ultimate...</td>
@@ -32,7 +32,9 @@
                     </tr>
                 </c:forEach>
             </table>
-            <p class="bottomlinks"><a href="/home">Home</a> <a href="/products">Products</a></p>
+            <p class="bottomlinks"><a href="/home"><mytags:translation key="home" langCode="${langCode}"></mytags:translation></a>
+                <a href="/cart"><mytags:translation key="cart" langCode="${langCode}"></mytags:translation></a>
+            </p>
         </main>
     </body>
     <footer>

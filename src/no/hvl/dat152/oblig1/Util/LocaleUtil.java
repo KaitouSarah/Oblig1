@@ -10,7 +10,7 @@ import java.util.Locale;
 public class LocaleUtil {
 	public static String getLanguage(HttpServletRequest req) {
 		Enumeration<Locale> locales = req.getLocales();
-		Dictionary dictionary = Dictionary.getInsstance();
+		Dictionary dictionary = Dictionary.getInstance();
 		List<Language> languages = dictionary.getLanguages();
 
 		Cookie[] cookies = req.getCookies();

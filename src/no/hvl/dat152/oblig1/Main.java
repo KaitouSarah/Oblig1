@@ -1,6 +1,7 @@
 package no.hvl.dat152.oblig1;
 
 import no.hvl.dat152.oblig1.Util.Dictionary;
+import no.hvl.dat152.oblig1.model.CartEAO;
 import no.hvl.dat152.oblig1.model.DescriptionEAO;
 import no.hvl.dat152.oblig1.model.ProductEAO;
 
@@ -15,11 +16,17 @@ public class Main {
 		descriptionEAO.createDescription(1, "es", "Este es el ultimato taza para software developers que trabajan en las noches y nessecitan algo para no dormir.");
 
 		productEAO.createProduct(2, "Black Coffee Mug (TM)", 11, "public/images/blackmug2.jpg");
-		descriptionEAO.createDescription(2, "en", "This is the ultimate cup for programmers who sit late evenings and need a little wake up.");
-		descriptionEAO.createDescription(2, "no", "Dette er den ultimate koppen for programutviklere som sitter sene kvelder og trenger litt å holde seg våken på.");
-		descriptionEAO.createDescription(2, "es", "Este es una taza para ellos que gusta el colore negra. La taza es muy bueno para café, té y leche, pero es tambien posible usarla con otro bebidas");
+		descriptionEAO.createDescription(2, "en", "This is the super ultimate cup for programmers who sit late evenings and need a little wake up.");
+		descriptionEAO.createDescription(2, "no", "Dette er den superultimate koppen for programutviklere som sitter sene kvelder og trenger litt å holde seg våken på.");
+		descriptionEAO.createDescription(2, "es", "Este es una taza SUPER para ellos que gusta el colore negra. La taza es muy bueno para café, té y leche, pero es tambien posible usarla con otro bebidas");
 
-		Dictionary dictionary = Dictionary.getInsstance();
+		CartEAO cart = CartEAO.getInstance();
+		cart.addToCart(1);
+		cart.addToCart(1);
+		cart.addToCart(2);
+
+
+		Dictionary dictionary = Dictionary.getInstance();
 
 		dictionary.addLanguage("en", "English (US)");
 		dictionary.addLanguage("no", "Norsk");
@@ -37,21 +44,21 @@ public class Main {
 		dictionary.addTranslation("cart", "no", "Handlekurv");
 		dictionary.addTranslation("cart", "es", "Handloskurvos");
 
-		dictionary.addTranslation("haveALookAtOurWonderful", "en", "Have a look at our wonderful");
-		dictionary.addTranslation("haveALookAtOurWonderful", "no", "Ta en titt på våre fantastiske");
-		dictionary.addTranslation("haveALookAtOurWonderful", "es", "Taos en tittos aki oura el fantastico");
+		dictionary.addTranslation("haveALookAtOurWonderful", "en", "Have a look at our wonderful ");
+		dictionary.addTranslation("haveALookAtOurWonderful", "no", "Ta en titt på våre fantastiske ");
+		dictionary.addTranslation("haveALookAtOurWonderful", "es", "Taos en tittos aki oura el fantastico ");
 
-		dictionary.addTranslation("name", "en", "Name");
-		dictionary.addTranslation("name", "no", "Navn");
-		dictionary.addTranslation("name", "es", "Navnos");
+		dictionary.addTranslation("name", "en", "Name: ");
+		dictionary.addTranslation("name", "no", "Navn: ");
+		dictionary.addTranslation("name", "es", "Navnos: ");
 
-		dictionary.addTranslation("price", "en", "Price");
-		dictionary.addTranslation("price", "no", "Pris");
-		dictionary.addTranslation("price", "es", "Prisos");
+		dictionary.addTranslation("price", "en", "Price: ");
+		dictionary.addTranslation("price", "no", "Pris: ");
+		dictionary.addTranslation("price", "es", "Prisos: ");
 
-		dictionary.addTranslation("description", "en", "Description");
-		dictionary.addTranslation("description", "no", "Beskrivelse");
-		dictionary.addTranslation("description", "es", "Beskrivelsos");
+		dictionary.addTranslation("description", "en", "Description: ");
+		dictionary.addTranslation("description", "no", "Beskrivelse: ");
+		dictionary.addTranslation("description", "es", "Beskrivelsos: ");
 
 		dictionary.addTranslation("addToCart", "en", "Add to cart");
 		dictionary.addTranslation("addToCart", "no", "Legg i handlekurv");
@@ -60,6 +67,10 @@ public class Main {
 		dictionary.addTranslation("shortDescription", "en", "Short description");
 		dictionary.addTranslation("shortDescription", "no", "Kort beskrivelse");
 		dictionary.addTranslation("shortDescription", "es", "Kortos beskrivelsos");
+
+		dictionary.addTranslation("quantity", "en", "Quantity");
+		dictionary.addTranslation("quantity", "no", "Antall");
+		dictionary.addTranslation("quantity", "es", "Antallos");
 
 		dictionary.addTranslation("total", "en", "Total");
 		dictionary.addTranslation("total", "no", "Total");

@@ -1,5 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="no.hvl.dat152.oblig1.CustomTags.CopyrightTAG" prefix="mytags"%>
+<%@ taglib uri="https://journaldev.com/jsp/tlds/mytags" prefix="mytags"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
     <head>
@@ -23,21 +23,23 @@
                                     <img src="${product.imageFile}" alt="">
                                     <div class="productDetails">
                                         <dl>
-                                            <dt>Navn: </dt>
+                                            <dt><mytags:translation key="name" langCode="${langCode}">: </mytags:translation> </dt>
                                             <dd>${product.pName}</dd>
-                                            <dt>Pris: </dt>
+                                            <dt><mytags:translation key="price" langCode="${langCode}">: </mytags:translation></dt>
                                             <dd>${product.priceInEuro}</dd>
-                                            <dt>Beskrivelse</dt>
-                                            <dd>Dette er den ultimate kopp for programvareutviklere som sitter sene kvelder og trenger noe for å ikke sovne</dd>
+                                            <dt><mytags:translation key="description" langCode="${langCode}"></mytags:translation></dt>
+                                            <dd><mytags:description key="${product.pno}" langCode="${langCode}"></mytags:description></dd>
                                         </dl>
-                                        <button onclick="window.location.href='/cart'">Legg i handlekurv</button>
+                                        <button onclick="window.location.href='/cart'"><mytags:translation key="addToCart" langCode="${langCode}"></mytags:translation></button>
                                     </div>
                                 </div>
                             </div>
                         </li>
                     </ul>
                 </c:forEach>
-                <p class="bottomlinks"><a href="/home">Home</a> <a href="/cart">Cart</a></p>
+                <p class="bottomlinks"><a href="/home"><mytags:translation key="home" langCode="${langCode}"></mytags:translation></a>
+                    <a href="/cart"><mytags:translation key="cart" langCode="${langCode}"></mytags:translation></a>
+                </p>
             </section>
         </main>
     </body>

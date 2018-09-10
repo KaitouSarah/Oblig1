@@ -15,7 +15,7 @@ public class TranslationTag extends SimpleTagSupport {
 	@Override
 	public void doTag() throws JspException {
 		try {
-			Dictionary dictionary = Dictionary.getInsstance();
+			Dictionary dictionary = Dictionary.getInstance();
 
 			getJspContext().getOut().write(dictionary.translate(key, langCode));
 		} catch (Exception e) {

@@ -1,5 +1,6 @@
 section {
     clear: right;
+    float: left;
 }
 
 .products li {
@@ -49,9 +50,15 @@ section {
     clear: left;
 }
 
-.cartTable th td{
+table, th, td {
     border: 1px solid black;
+    border-collapse: collapse;
 }
 .cartTable th {
     max-width: 10rem;
+}
+
+footer {
+    clear: left;
+    float: left;
 }

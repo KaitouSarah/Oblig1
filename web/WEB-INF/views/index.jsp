@@ -9,9 +9,9 @@
     </head>
     <body>
         <header>
-            <a href="#">Norsk</a>
-            <a href="#">Engelsk</a>
-            <a href="#">Espanjol</a>
+            <a href="/home?langCode=no">Norsk</a>
+            <a href="/home?langCode=en">Engelsk</a>
+            <a href="/home?langCode=es">Espanjol</a>
         </header>
         <main>
             <h1>Javascripters AS</h1>

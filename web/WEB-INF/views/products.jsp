@@ -8,9 +8,9 @@
     </head>
     <body>
         <header>
-            <a href="#">Norsk</a>
-            <a href="#">Engelsk</a>
-            <a href="#">Espanjol</a>
+            <a href="/products?langCode=no">Norsk</a>
+            <a href="/products?langCode=en">Engelsk</a>
+            <a href="/products?langCode=es">Espanjol</a>
         </header>
         <main>
             <section class="products">
@@ -26,7 +26,7 @@
                                             <dt><mytags:translation key="name" langCode="${langCode}">: </mytags:translation> </dt>
                                             <dd>${product.pName}</dd>
                                             <dt><mytags:translation key="price" langCode="${langCode}">: </mytags:translation></dt>
-                                            <dd>${product.priceInEuro}</dd>
+                                            <dd><mytags:exchange eur="${product.priceInEuro}" langCode="${langCode}"></mytags:exchange></dd>
                                             <dt><mytags:translation key="description" langCode="${langCode}"></mytags:translation></dt>
                                             <dd><mytags:description key="${product.pno}" langCode="${langCode}"></mytags:description></dd>
                                         </dl>

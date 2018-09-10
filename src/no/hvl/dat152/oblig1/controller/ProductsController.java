@@ -18,7 +18,8 @@ public class ProductsController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         ProductEAO productEAO = ProductEAO.getInstance();
-        String langCode = LocaleUtil.getLanguage(req);
+        LocaleUtil.setLanguageCookie(req, resp);
+        String langCode = LocaleUtil.getLanguage(req, req.getParameter("langCode"));
         List<Product> products = productEAO.getProducts();
 
         req.setAttribute("products", products);

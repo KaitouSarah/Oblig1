@@ -20,11 +20,11 @@ public class Main {
 		descriptionEAO.createDescription(2, "no", "Dette er den superultimate koppen for programutviklere som sitter sene kvelder og trenger litt å holde seg våken på.");
 		descriptionEAO.createDescription(2, "es", "Este es una taza SUPER para ellos que gusta el colore negra. La taza es muy bueno para café, té y leche, pero es tambien posible usarla con otro bebidas");
 
-		CartEAO cart = CartEAO.getInstance();
-		cart.addToCart(1);
-		cart.addToCart(1);
-		cart.addToCart(2);
+		CartEAO cartEAO = CartEAO.getInstance();
 
+		cartEAO.createCart(1);
+		cartEAO.addCartItemToCart(1, 1, 2);
+		cartEAO.addCartItemToCart(1, 2, 3);
 
 		Dictionary dictionary = Dictionary.getInstance();
 
@@ -64,17 +64,17 @@ public class Main {
 		dictionary.addTranslation("addToCart", "no", "Legg i handlekurv");
 		dictionary.addTranslation("addToCart", "es", "Leggos i handloskurvos");
 
-		dictionary.addTranslation("shortDescription", "en", "Short description");
-		dictionary.addTranslation("shortDescription", "no", "Kort beskrivelse");
-		dictionary.addTranslation("shortDescription", "es", "Kortos beskrivelsos");
+		dictionary.addTranslation("shortDescription", "en", "Short description:");
+		dictionary.addTranslation("shortDescription", "no", "Kort beskrivelse:");
+		dictionary.addTranslation("shortDescription", "es", "Kortos beskrivelsos:");
 
-		dictionary.addTranslation("quantity", "en", "Quantity");
-		dictionary.addTranslation("quantity", "no", "Antall");
-		dictionary.addTranslation("quantity", "es", "Antallos");
+		dictionary.addTranslation("quantity", "en", "Quantity:");
+		dictionary.addTranslation("quantity", "no", "Antall:");
+		dictionary.addTranslation("quantity", "es", "Antallos:");
 
-		dictionary.addTranslation("total", "en", "Total");
-		dictionary.addTranslation("total", "no", "Total");
-		dictionary.addTranslation("total", "es", "Totalos");
+		dictionary.addTranslation("total", "en", "Total:");
+		dictionary.addTranslation("total", "no", "Total:");
+		dictionary.addTranslation("total", "es", "Totalos:");
 
 		dictionary.addTranslation("totalAmount", "en", "Total amount");
 		dictionary.addTranslation("totalAmount", "no", "Total mengde");

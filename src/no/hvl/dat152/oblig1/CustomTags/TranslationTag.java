@@ -5,8 +5,7 @@ import no.hvl.dat152.oblig1.Util.Dictionary;
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.SkipPageException;
 import javax.servlet.jsp.tagext.SimpleTagSupport;
-import java.io.IOException;
-import java.text.DecimalFormat;
+
 
 public class TranslationTag extends SimpleTagSupport {
 	private String key;

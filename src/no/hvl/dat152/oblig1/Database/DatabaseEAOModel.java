@@ -30,4 +30,8 @@ public class DatabaseEAOModel {
 	protected void createObject (HashMap<String, Object> object) {
 		database.addRow(tableName, object);
 	}
+
+	protected void replaceObject (HashMap<String, Object> object, Predicate<HashMap<String, Object>> predicate) {
+		database.replaceRow(tableName, predicate, object);
+	}
 }

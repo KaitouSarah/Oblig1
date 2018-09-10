@@ -1,5 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="https://journaldev.com/jsp/tlds/mytags" prefix="mytags"%>
+<%@ taglib prefix="mytag" uri="https://journaldev.com/jsp/tlds/mytags" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
     <head>
@@ -8,9 +9,9 @@
     </head>
     <body>
         <header>
-            <a href="#">Norsk</a>
-            <a href="#">Engelsk</a>
-            <a href="#">Espanjol</a>
+            <a href="/cart?langCode=no">Norsk</a>
+            <a href="/cart?langCode=en">Engelsk</a>
+            <a href="/cart?langCode=es">Espanjol</a>
         </header>
         <main>
             <h1>Cart</h1>
@@ -22,13 +23,14 @@
                     <th><mytags:translation key="quantity" langCode="${langCode}"></mytags:translation></th>
                     <th><mytags:translation key="total" langCode="${langCode}"></mytags:translation></th>
                 </tr>
-                <c:forEach items="${cart}" var="cart">
+                <c:forEach items="${cart.getItems()}" var="cartItem">
                     <tr>
-                        <td>White Coffee Mug (TM)</td>
-                        <td>This is the ultimate...</td>
-                        <td>10</td>
-                        <td>2</td>
-                        <td>20</td>
+                        <td>${productEAO.getProduct(cartItem.getPno()).getpName()}</td>
+                        <td><mytags:truncate shortDescription="${descriptionEAO.getDescription(productEAO.getProduct(cartItem.getPno()).getPno(), langCode).getText()}"></mytags:truncate></td>
+                        <td><mytag:exchange eur="${productEAO.getProduct(cartItem.getPno()).getPriceInEuro()}" langCode="${langCode}"></mytag:exchange></td>
+                        <td>${cartItem.getQuantity()}</td>
+                        <td><mytags:total price="${productEAO.getProduct(cartItem.getPno()).getPriceInEuro()}"
+                                          langCode="${langCode}" quantity="${cartItem.getQuantity()}"></mytags:total></td>
                     </tr>
                 </c:forEach>
             </table>

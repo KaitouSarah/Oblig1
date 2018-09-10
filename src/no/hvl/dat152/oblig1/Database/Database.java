@@ -32,6 +32,22 @@ public class Database {
 		table.add(new HashMap<>(object));
 	}
 
+	public void replaceRow(String tableName, Predicate<HashMap<String, Object>> predicate, HashMap<String, Object> object) {
+		// Gets table from tables
+		List<HashMap<String, Object>> table = tables.get(tableName);
+
+		if (table == null) {
+			return;
+		}
+
+		for (int i = 0; i < table.size(); i++) {
+			if (predicate.test(table.get(i))) {
+				table.set(i, object);
+				return;
+			}
+		}
+	}
+
 	public List<HashMap<String, Object>> getObjects(String tableName, Predicate<HashMap<String, Object>> predicate) {
 		// Get table
 		List<HashMap<String, Object>> table = tables.get(tableName);

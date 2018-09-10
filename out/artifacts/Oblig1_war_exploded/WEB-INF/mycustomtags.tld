@@ -48,4 +48,49 @@
             <rtexprvalue>true</rtexprvalue>
         </attribute>
     </tag>
+    <tag>
+        <name>exchange</name>
+        <tag-class>no.hvl.dat152.oblig1.CustomTags.ExchangeCurrencyTAG</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>eur</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>langCode</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    <tag>
+        <name>total</name>
+        <tag-class>no.hvl.dat152.oblig1.CustomTags.TotalTAG</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>price</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>langCode</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>quantity</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    <tag>
+        <name>truncate</name>
+        <tag-class>no.hvl.dat152.oblig1.CustomTags.TruncateTAG</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>shortDescription</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
 </taglib>

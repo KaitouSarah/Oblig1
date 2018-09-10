@@ -2,7 +2,7 @@ package no.hvl.dat152.oblig1.controller;
 
 
 import no.hvl.dat152.oblig1.Util.LocaleUtil;
-import no.hvl.dat152.oblig1.model.Cart;
+import no.hvl.dat152.oblig1.model.*;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -16,12 +16,17 @@ public class CartController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Cart cart = new Cart();
-        List<Integer> cartProducts = cart.getCart();
+        CartEAO cartEAO = CartEAO.getInstance();
+        Cart cart = cartEAO.getCart(1);
+        ProductEAO productEAO = ProductEAO.getInstance();
+        DescriptionEAO descriptionEAO = DescriptionEAO.getInstance();
 
-        String langCode = LocaleUtil.getLanguage(req);
+        LocaleUtil.setLanguageCookie(req, resp);
+        String langCode = LocaleUtil.getLanguage(req, req.getParameter("langCode"));
+        req.setAttribute("descriptionEAO", descriptionEAO);
+        req.setAttribute("productEAO", productEAO);
+        req.setAttribute("cart", cart);
         req.setAttribute("langCode", langCode);
-        req.setAttribute("cart", cartProducts);
         req.getRequestDispatcher("WEB-INF/views/cart.jsp").forward(req, resp);
     }
 }

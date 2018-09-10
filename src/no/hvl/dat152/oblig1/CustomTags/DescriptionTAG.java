@@ -8,6 +8,9 @@ import javax.servlet.jsp.tagext.SimpleTagSupport;
 
 public class DescriptionTAG extends SimpleTagSupport {
 
+    int key;
+    String langCode;
+
     @Override
     public void doTag() throws JspException {
         try {
@@ -21,9 +24,6 @@ public class DescriptionTAG extends SimpleTagSupport {
             throw new SkipPageException("Something failed??");
         }
     }
-
-    int key;
-    String langCode;
 
     public int getKey() {
         return key;

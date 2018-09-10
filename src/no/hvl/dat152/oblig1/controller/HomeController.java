@@ -13,9 +13,9 @@ public class HomeController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String langCode = LocaleUtil.getLanguage(req);
+        LocaleUtil.setLanguageCookie(req, resp);
+        String langCode = LocaleUtil.getLanguage(req, req.getParameter("langCode"));
         req.setAttribute("langCode", langCode);
-
         req.getRequestDispatcher("WEB-INF/views/index.jsp").forward(req, resp);
     }
 }

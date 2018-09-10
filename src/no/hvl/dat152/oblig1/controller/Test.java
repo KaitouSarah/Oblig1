@@ -19,7 +19,7 @@ public class Test extends HttpServlet {
 
 		List<Product> products = productEAO.getProducts();
 
-		String langCode = LocaleUtil.getLanguage(req);
+		String langCode = LocaleUtil.getLanguage(req, req.getParameter("langCode"));
 
 		req.setAttribute("langCode", langCode);
 		req.setAttribute("products", products);
